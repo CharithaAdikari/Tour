@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">tour</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">add</string>
+    <string name="see_all">See All</string>
+    <string name="recommended">Recommended</string>
+    <string name="google_maps_key">AIzaSyAOuBCCRll9rd6wMFuQxtkzdmNntc46t6M</string>
+
+</resources>

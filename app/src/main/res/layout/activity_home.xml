@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="412dp"
+        android:layout_height="893dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="804dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="Add your Visit Places"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <SearchView
+                        android:id="@+id/search"
+                        android:layout_width="302dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/card_background_round"
+                        android:backgroundTint="#D4C5C5" />
+
+                    <Button
+                        android:id="@+id/btnsearch"
+                        android:layout_width="84dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="#00FFFFFF"
+                        app:icon="@drawable/icons8_search_50"
+                        app:iconGravity="textEnd"
+                        app:iconSize="40dp"
+                        app:iconTint="#968B8B" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="376dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_background_round"
+                    android:backgroundTint="#D3C4C4"
+
+                    android:contentDescription="TODO"
+                    android:outlineProvider="background"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="350dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/icons8_upload_50"
+                    android:backgroundTint="#8D8888"
+                    android:contentDescription="TODO" />
+
+                <EditText
+                    android:id="@+id/editTextVisitPlaceName"
+                    android:layout_width="376dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_background_round"
+                    android:backgroundTint="#E2DBDB"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:hint="Visit Place Name"
+                    android:padding="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#090909" />
+
+
+                <EditText
+                    android:id="@+id/editTextVisitPlaceDescription"
+                    android:layout_width="378dp"
+                    android:layout_height="208dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/card_background_round"
+                    android:backgroundTint="#E2DBDB"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="start|top"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:outlineProvider="none"
+                    android:padding="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#090909" />z
+
+                <FrameLayout
+                    android:id="@+id/mapcontainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="790dp"
+                    android:layout_marginBottom="70dp">
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="791dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btnhomefromhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#00FFFFFF"
+            app:icon="@drawable/icons8_home_page_50"
+            app:iconGravity="textEnd"
+            app:iconSize="40dp"
+            app:iconTint="#968B8B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#02FFFFFF"
+            app:icon="@drawable/icons8_add_50__1_"
+            app:iconGravity="textEnd"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#968B8B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnupdate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#02FFFFFF"
+            app:icon="@drawable/icons8_edit_50"
+            app:iconGravity="textEnd"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#968B8B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btndelete"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="#02FFFFFF"
+            app:icon="@drawable/icons8_delete_50"
+            app:iconGravity="textEnd"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#968B8B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
