@@ -33,7 +33,7 @@
         android:layout_width="111dp"
         android:layout_height="28dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Namenewnew"
+        android:text="Name"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="14sp"
