@@ -36,6 +36,7 @@ public class mainscreen extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_mainscreen);
 
+
         recyclerView = findViewById(R.id.recycler_view1);
         recyclerView2 = findViewById(R.id.recycler_view2);
         recyclerView3 = findViewById(R.id.recycler_view3);

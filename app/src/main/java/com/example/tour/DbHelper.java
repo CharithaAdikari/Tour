@@ -6,10 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
 import android.util.Log;
-
-import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,9 +15,12 @@ import java.io.OutputStream;
 public class DbHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "DB";
     private static final int DB_VERSION = 1;
+
+    //tables
     private static final String TABLE_USER = "user";
     public static final String TABLE_VISIT_PLACE = "visitplace";
 
+    //user table columns
     private static final String ID = "id";
     private static final String FNAME = "fname";
     private static final String LNAME = "lname";
@@ -28,7 +28,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String PASSWORD = "password";
     private static final String CONFIRM_PASSWORD = "confirm_password";
 
-    // Columns for visitplace table
+    //visitplace table columns
     public static final String PLACE_NAME = "placename";
     public static final String DESCRIPTION = "description";
     public static final String IMAGE = "image";
@@ -153,7 +153,7 @@ public class DbHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(PLACE_NAME, placeName);
         values.put(DESCRIPTION, description);
-        values.put(IMAGE, image); // Save the image byte array directly
+        values.put(IMAGE, image);
         values.put(LATITUDE, latitude);
         values.put(LONGITUDE, longitude);
         db.insert(TABLE_VISIT_PLACE, null, values);
@@ -243,10 +243,11 @@ public class DbHelper extends SQLiteOpenHelper {
     public Cursor getVisitPlaceByName(String placeName) {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] projection = {PLACE_NAME, DESCRIPTION, IMAGE, LATITUDE, LONGITUDE};
-        String selection = PLACE_NAME + "=?";
-        String[] selectionArgs = {placeName};
+        String selection = "LOWER(" + PLACE_NAME + ") LIKE ?";
+        String[] selectionArgs = {"%" + placeName.toLowerCase() + "%"};
         return db.query(TABLE_VISIT_PLACE, projection, selection, selectionArgs, null, null, null);
     }
+
 
     public Cursor searchPlacesByName(String query) {
         SQLiteDatabase db = this.getReadableDatabase();

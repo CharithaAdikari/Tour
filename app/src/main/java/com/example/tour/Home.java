@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -32,14 +31,9 @@ public class Home extends AppCompatActivity implements Map_Fragment.OnMapClickLi
 
     private EditText editTextVisitPlaceName, editTextVisitPlaceDescription;
     private ImageView imageViewSelected;
-    private ImageView imageView;
-    private Button btnSubmit, btnUpdate;
     private double latitude;
     private double longitude;
-    private ImageButton btnSelectImage;
     private Bitmap selectedImageBitmap;
-    private Button btnDelete;
-
 
 
     @Override
@@ -50,7 +44,7 @@ public class Home extends AppCompatActivity implements Map_Fragment.OnMapClickLi
 
         Button Search = findViewById(R.id.btnsearch);
 
-        btnDelete = findViewById(R.id.btndelete);
+        Button btnDelete = findViewById(R.id.btndelete);
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +72,7 @@ public class Home extends AppCompatActivity implements Map_Fragment.OnMapClickLi
         });
 
         // Set click listener for update button
-        btnUpdate = findViewById(R.id.btnupdate);
+        Button btnUpdate = findViewById(R.id.btnupdate);
         // Set click listener for update button
         // Set click listener for update button
         btnUpdate.setOnClickListener(new View.OnClickListener() {
@@ -115,8 +109,8 @@ public class Home extends AppCompatActivity implements Map_Fragment.OnMapClickLi
         editTextVisitPlaceName = findViewById(R.id.editTextVisitPlaceName);
         editTextVisitPlaceDescription = findViewById(R.id.editTextVisitPlaceDescription);
         imageViewSelected = findViewById(R.id.imageView);
-        btnSubmit = findViewById(R.id.btnSubmit);
-        btnSelectImage = findViewById(R.id.btnSelectImage);
+        Button btnSubmit = findViewById(R.id.btnSubmit);
+        ImageButton btnSelectImage = findViewById(R.id.btnSelectImage);
 
         ((Map_Fragment) fragment).setOnMapClickListener(this);
 
@@ -203,7 +197,7 @@ public class Home extends AppCompatActivity implements Map_Fragment.OnMapClickLi
     public void searchVisitPlace(View view) {
         // Get the search query
         SearchView searchView = findViewById(R.id.search);
-        imageView = findViewById(R.id.imageView);
+        ImageView imageView = findViewById(R.id.imageView);
         String placeName = searchView.getQuery().toString().trim();
 
         DbHelper dbHelper = new DbHelper(this);

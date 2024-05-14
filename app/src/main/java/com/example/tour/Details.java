@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,7 +19,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Details extends AppCompatActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
     private MapView mMapView;
     private TextView txtTitle;
     private TextView txtDetails;
@@ -105,10 +103,9 @@ public class Details extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
         LatLng location = new LatLng(latitude, longitude);
-        mMap.addMarker(new MarkerOptions().position(location).title(placeName));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
+        googleMap.addMarker(new MarkerOptions().position(location).title(placeName));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
     }
 
     private void retrieveLocationFromDatabase(String placeName) {

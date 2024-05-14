@@ -24,8 +24,14 @@
             android:layout_gravity="end"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="skip >"
+            android:background="@drawable/button_background_round_normal"
+            android:backgroundTint="#EAE3E3"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingLeft="10dp"
+            android:paddingTop="1dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="1dp"
+            android:text="Skip >"
             android:textColor="#000000"
             android:textStyle="bold" />
 

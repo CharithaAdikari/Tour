@@ -37,6 +37,12 @@ public class Welcome extends AppCompatActivity {
             return insets;
         });
 
+        TextView skip = findViewById(R.id.txtskip);
+        skip.setOnClickListener(v -> {
+            Intent intent = new Intent(Welcome.this, Register.class);
+            startActivity(intent);
+        });
+
 
         Button Welcome = findViewById(R.id.btnwelcome);
         Welcome.setOnClickListener(v -> {
